@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 /**
  * Get files in
  * Returns a list of file paths of specified types from a directory
@@ -25,4 +27,4 @@ const getFilesIn = (folderPath, matchFiletypes = []) => {
   return filePaths;
 };
 
-export default getFilesIn;
+module.exports = getFilesIn;
