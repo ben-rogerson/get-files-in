@@ -1,0 +1,20 @@
+{
+  "name": "get-files-in",
+  "version": "1.0.0",
+  "description": "A simple script that synchronously returns a list of file paths of specified types from a directory.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ben-rogerson/get-files-in.git"
+  },
+  "keywords": [],
+  "author": "Ben Rogerson <info@benrogerson.com.au> (https://benrogerson.com.au)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ben-rogerson/get-files-in/issues"
+  },
+  "homepage": "https://github.com/ben-rogerson/get-files-in#readme"
+}
