@@ -24,6 +24,13 @@ const getFilesIn = (folderPath, matchFiletypes = []) => {
   const filePaths = entryPathFiles.filter(entryPath =>
     fs.statSync(entryPath).isFile()
   );
+  if (checkSubDirectories) {
+    const dirPaths = entryPaths.filter(entryPath => !filePaths.includes(entryPath));
+    const dirFiles = dirPaths
+      .filter(path => !path.split('/').pop().startsWith('_')) // Don't include files in folders prefixed with _
+      .reduce((prev, curr) => prev.concat(getFilesIn(curr, fileTypeArray, true)), []);
+    return [...filePaths, ...dirFiles];
+  }
   return filePaths;
 };
 
