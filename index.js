@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 
 /**
  * Get files in
@@ -6,7 +7,7 @@ const fs = require('fs');
  * Usage: getFilesIn('/dir', ["js"])
  */
 
-const getFilesIn = (folderPath, matchFiletypes = []) => {
+const getFilesIn = (folderPath, matchFiletypes = [], checkSubDirectories = false) => {
   // Exit early if the folder doesn't exist
   if (!fs.existsSync(folderPath)) return []
 
