@@ -7,6 +7,9 @@ const fs = require('fs');
  */
 
 const getFilesIn = (folderPath, matchFiletypes = []) => {
+  // Exit early if the folder doesn't exist
+  if (!fs.existsSync(folderPath)) return []
+
   const entryPaths = fs
     .readdirSync(folderPath)
     .map(entry => path.join(folderPath, entry));
