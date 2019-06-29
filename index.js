@@ -12,6 +12,7 @@ const getFilesIn = (folderPath, matchFiletypes = []) => {
 
   const entryPaths = fs
     .readdirSync(folderPath)
+    .filter(entry => !entry.startsWith(".")) // remove .DS_Store, .env etc
     .map(entry => path.join(folderPath, entry));
   const fileTypeArray = Array.isArray(matchFiletypes)
     ? matchFiletypes
