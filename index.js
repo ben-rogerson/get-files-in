@@ -13,10 +13,10 @@ const getFilesIn = (folderPath, matchFiletypes = []) => {
   const entryPaths = fs
     .readdirSync(folderPath)
     .map(entry => path.join(folderPath, entry));
+  const fileTypeArray = Array.isArray(matchFiletypes)
+    ? matchFiletypes
+    : [matchFiletypes];
   const entryPathFiles = entryPaths.filter(entry => {
-    const fileTypeArray = Array.isArray(matchFiletypes)
-      ? matchFiletypes
-      : [matchFiletypes];
     return fileTypeArray.includes(
       entry
         .slice()
