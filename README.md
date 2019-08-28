@@ -40,3 +40,8 @@ getFilesIn(path.resolve(__dirname, source.styles), [
 //  '/Users/hotstuff/project/src/styles/subfolders-allowed/index.sass',
 // ]
 ```
+
+## History
+
+This package was created for the [Agency Webpack Mix Config](https://github.com/ben-rogerson/agency-webpack-mix-config).
+The package was updated to use [Globby](https://github.com/sindresorhus/globby) because it uses an improved syntax to select files.
